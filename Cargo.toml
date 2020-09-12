@@ -8,7 +8,7 @@ readme = "README.md"
 keywords = ["support"]
 catagories = []
 edition = "2018"
-license = "LICENSE"
+license = "MIT"
 
 [lib]
 proc-macro = true
