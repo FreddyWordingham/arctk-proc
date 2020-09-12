@@ -1,6 +1,6 @@
 [package]
 authors = ["Freddy Wordingham <fjmw201@exeter.ac.uk>"]
-name = "proc"
+name = "arctk-proc"
 version = "0.1.0"
 description = "Support procedural macro library."
 repository = "https://github.com/FreddyWordingham/arctk"

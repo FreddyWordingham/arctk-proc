@@ -18,6 +18,7 @@ authors = ["Freddy Wordingham <fjmw201@exeter.ac.uk>"]
 description = "Support procedural macro library."
 readme = "README.md"
 keywords = ["support"]
+license = "LICENSE"
 repository = "https://github.com/FreddyWordingham/arctk"
 [profile.bench]
 opt-level = 3
