@@ -8,7 +8,7 @@ readme = "README.md"
 keywords = ["support"]
 catagories = []
 edition = "2018"
-license = "MIT"
+license = "MIT OR Apache-2.0"
 
 [lib]
 proc-macro = true
