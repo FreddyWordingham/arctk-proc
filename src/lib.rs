@@ -12,7 +12,7 @@
     clippy::implicit_return,
     clippy::module_name_repetitions,
     clippy::panic,
-    clippy::result_expect_used,
+    clippy::expect_used,
     clippy::wildcard_enum_match_arm
 )]
 
