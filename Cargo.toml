@@ -9,6 +9,7 @@ keywords = ["support"]
 catagories = []
 edition = "2018"
 license = "MIT OR Apache-2.0"
+documentation = "https://docs.rs/arctk-proc"
 
 [lib]
 proc-macro = true
