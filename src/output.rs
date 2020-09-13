@@ -20,7 +20,7 @@ pub fn output_derive_impl(input: TokenStream) -> TokenStream {
     let output = quote! {
         impl arctk::Save for #name {
             #[inline]
-            fn save(&self, path: &std::path::Path) -> std::result::Result<(), arctk::Error> {
+            fn save(&self, path: &std::path::Path) -> std::result::Result<(), arctk::err::Error> {
                 arctk::as_json(self, path)
             }
         }
