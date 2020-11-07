@@ -9,6 +9,7 @@
     clippy::restriction
 )]
 #![allow(
+    clippy::blanket_clippy_restriction_lints,
     clippy::implicit_return,
     clippy::module_name_repetitions,
     clippy::panic,
