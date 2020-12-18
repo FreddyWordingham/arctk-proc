@@ -18,10 +18,10 @@ pub fn save_derive_impl(input: TokenStream) -> TokenStream {
     };
 
     let output = quote! {
-        impl crate::Save for #name {
+        impl crate::fs::Save for #name {
             #[inline]
-            fn save_data(&self, path: &std::path::Path) -> std::result::Result<(), crate::Error> {
-                crate::as_json(self, path)
+            fn save_data(&self, path: &std::path::Path) -> std::result::Result<(), crate::err::Error> {
+                crate::fs::as_json(self, path)
             }
         }
     };
