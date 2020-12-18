@@ -20,7 +20,7 @@ pub fn load_derive_impl(input: TokenStream) -> TokenStream {
     let output = quote! {
         impl crate::fs::File<#generics> for #name<#generics> {
             #[inline]
-            fn load_data(path: &std::path::Path) -> std::result::Result<Self, crate::err::Error> {
+            fn load(path: &std::path::Path) -> std::result::Result<Self, crate::err::Error> {
                 crate::fs::from_json(path)
             }
         }
