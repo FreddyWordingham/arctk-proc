@@ -1,13 +1,13 @@
-//! Implementation function of the load procedural macro.
+//! Implementation function of the file procedural macro.
 
 use crate::proc_macro::TokenStream;
 use quote::quote;
 use syn::{parse_macro_input, Item};
 
-/// Implement `Load` trait using json parsing.
+/// Implement `file` trait using json parsing.
 #[inline]
 #[must_use]
-pub fn load_derive_impl(input: TokenStream) -> TokenStream {
+pub fn file_derive_impl(input: TokenStream) -> TokenStream {
     let input = parse_macro_input!(input as Item);
 
     let (name, generics) = match input {
@@ -20,7 +20,7 @@ pub fn load_derive_impl(input: TokenStream) -> TokenStream {
     let output = quote! {
         impl crate::fs::File<#generics> for #name<#generics> {
             #[inline]
-            fn load(path: &std::path::Path) -> std::result::Result<Self, crate::err::Error> {
+            fn file(path: &std::path::Path) -> std::result::Result<Self, crate::err::Error> {
                 crate::fs::from_json(path)
             }
         }

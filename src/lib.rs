@@ -20,8 +20,8 @@
 extern crate proc_macro;
 extern crate proc_macro2;
 
+mod file;
 mod input;
-mod load;
 mod output;
 mod save;
 
@@ -35,12 +35,12 @@ pub fn input_derive(input: TokenStream) -> TokenStream {
     input::input_derive_impl(input)
 }
 
-/// Create the procedural macro Load.
-#[proc_macro_derive(Load)]
+/// Create the procedural macro File.
+#[proc_macro_derive(File)]
 #[inline]
 #[must_use]
-pub fn load_derive(input: TokenStream) -> TokenStream {
-    load::load_derive_impl(input)
+pub fn file_derive(input: TokenStream) -> TokenStream {
+    file::file_derive_impl(input)
 }
 
 /// Create the procedural macro Output.
