@@ -18,7 +18,7 @@ pub fn input_derive_impl(input: TokenStream) -> TokenStream {
     };
 
     let output = quote! {
-        impl arctk::fs::Load<#generics> for #name<#generics> {
+        impl arctk::fs::File<#generics> for #name<#generics> {
             #[inline]
             fn load(path: &std::path::Path) -> std::result::Result<Self, arctk::err::Error> {
                 arctk::fs::from_json(path)
